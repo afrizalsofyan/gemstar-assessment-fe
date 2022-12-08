@@ -1,8 +1,18 @@
 import React from 'react'
+import Navbar from './Navbar'
+import Sidebar from './Sidebar'
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <div>Layout</div>
+    <section className='bg-[#F5F6FA] min-h-screen flex'>
+      <Sidebar />
+      <main className='w-4/5'>
+        <Navbar />
+        <div className='p-[33px]'>
+          {children}
+        </div>
+      </main>
+    </section>
   )
 }
 

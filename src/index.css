@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Nunito', sans-serif !important;
+}
+.custom-shadow {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+span.active {
+  color: #1e67af;
+}
