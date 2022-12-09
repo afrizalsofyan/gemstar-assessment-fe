@@ -18,6 +18,7 @@ module.exports = {
       },
       colors: {
         'black-text': '#323A46',
+        'blue-primary': '#1E67AF',
       },
       fontSize: {
         11: ['11px', '15px'],

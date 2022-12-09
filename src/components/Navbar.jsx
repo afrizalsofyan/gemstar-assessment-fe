@@ -10,7 +10,7 @@ const Navbar = () => {
         <input placeholder='Search anything here ... ' className='w-full outline-none text-sm' />
       </div>
       <div className='flex gap-6'>
-        <div className='flex gap-2' onClick={() => console.log('logout')} aria-hidden='true'>
+        <div className='flex gap-2 hover:opacity-75 cursor-pointer' onClick={() => console.log('logout')} aria-hidden='true'>
           <img src={LogoutIcon} alt='logout' />
           <span className='font-bold text-[#EE0D0D] text-base'>Logout</span>
         </div>

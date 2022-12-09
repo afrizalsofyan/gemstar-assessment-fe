@@ -26,7 +26,7 @@ const Sidebar = () => {
   ]
 
   return (
-    <aside className='w-1/4 min-h-screen bg-white flex flex-col custom-shadow'>
+    <aside className='w-1/5 min-h-screen bg-white flex flex-col custom-shadow'>
       <div className='h-65 bg-blue-primary flex items-center pl-6'>
         <img src={BrandLogo} alt='brand-logo' />
       </div>
