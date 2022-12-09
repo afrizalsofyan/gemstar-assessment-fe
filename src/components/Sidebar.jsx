@@ -36,7 +36,7 @@ const Sidebar = () => {
         {menuSideBar.map((e) => {
           return (
             <div key={e.key}>
-              <div className='pb-4 w-full truncate'>
+              <div className='pb-4 w-full truncate text-center md:text-start'>
                 <span className='uppercase text-11 tracking-normal sm:tracking-spacing-0.16'>{e.key}</span>
               </div>
               {e.menus.map((menu, index) => {
@@ -46,7 +46,7 @@ const Sidebar = () => {
                       <div className='w-[22px] h-[22px] flex items-center justify-center'>
                         {menu.icon}
                       </div>
-                      <span className={`${active === menu.id ? 'active' : ''} capitalize font-bold hidden sm:flex`}>{menu.name}</span>
+                      <span className={`${active === menu.id ? 'active' : ''} capitalize text-sm md:text-base font-bold hidden sm:flex`}>{menu.name}</span>
                     </div>
                     {menu.id === 2 ? (
                       <hr className='border border-[#DCDCDC] my-7' />
