@@ -28,7 +28,7 @@ const ClientList = () => {
   return (
     <section className='mt-11'>
       <TitleContent title='Your client list' subtitle='You currently servicing 3 clients' />
-      <div className='flex gap-4'>
+      <div className='flex gap-4 flex-col md:flex-row w-full'>
         {exampleList.map(e => {
           return (
             <CartClientList logoClient={e.logo} clientName={e.name} clientDetail={e.detail} key={e.key} />

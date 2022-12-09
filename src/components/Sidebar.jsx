@@ -27,24 +27,26 @@ const Sidebar = () => {
 
   return (
     <aside className='w-1/5 min-h-screen bg-white flex flex-col custom-shadow'>
-      <div className='h-65 bg-blue-primary flex items-center pl-6'>
+      <div className='hidden sm:flex h-[70px] bg-blue-primary items-center px-5 lg:pl-6 lg:pr-0'>
         <img src={BrandLogo} alt='brand-logo' />
       </div>
-      <div className='mx-30 mt-[59px]'>
+      <div className='px-2 sm:px-0 sm:mx-30 mt-6 sm:mt-[59px]'>
         <UserCard imgSrc={UserProfile} name='radhika dhawan puri' jobRole='Senior Client Services' />
         <hr className='border border-[#DCDCDC] my-7' />
         {menuSideBar.map((e) => {
           return (
             <div key={e.key}>
-              <div className='pb-4'>
-                <span className='uppercase text-11 tracking-spacing-0.16 '>{e.key}</span>
+              <div className='pb-4 w-full truncate'>
+                <span className='uppercase text-11 tracking-normal sm:tracking-spacing-0.16'>{e.key}</span>
               </div>
               {e.menus.map((menu, index) => {
                 return (
                   <div key={menu.name + ' ' + menu.id}>
-                    <div className={`${index === e.menus.length - 1 ? 'pb-7' : 'pb-3'} flex gap-3 items-center hover:opacity-75 cursor-pointer`} onClick={() => setActive(menu.id)} aria-hidden='true'>
-                      {menu.icon}
-                      <span className={`${active === menu.id ? 'active' : ''} capitalize font-bold`}>{menu.name}</span>
+                    <div className={`${index === e.menus.length - 1 ? 'pb-7' : 'pb-3'} flex gap-3 items-center justify-center sm:justify-start hover:opacity-75 cursor-pointer`} onClick={() => setActive(menu.id)} aria-hidden='true'>
+                      <div className='w-[22px] h-[22px] flex items-center justify-center'>
+                        {menu.icon}
+                      </div>
+                      <span className={`${active === menu.id ? 'active' : ''} capitalize font-bold hidden sm:flex`}>{menu.name}</span>
                     </div>
                     {menu.id === 2 ? (
                       <hr className='border border-[#DCDCDC] my-7' />
